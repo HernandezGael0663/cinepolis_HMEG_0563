@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinépolis - Registro</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #002b49;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #001f35;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .contenedor-principal {
+            flex: 1;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .form-contenedor {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-contenedor input[type="text"], .form-contenedor select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 15px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+        }
+        .form-contenedor button {
+            width: 100%;
+            padding: 10px;
+            background-color: #002b49;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .form-contenedor button:hover {
+            background-color: #001f35;
+        }
+        footer {
+            background-color: #002b49;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cinépolis</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio / Registro</a>
+        <a href="tarjeta.html">Tarjeta Club Cinépolis</a>
+        <a href="cartelera.html">Cartelera y Estrenos</a>
+    </nav>
+
+    <div class="contenedor-principal">
+        <div class="form-contenedor">
+            <h2>Registro de Usuario</h2>
+            <form action="cartelera.html" method="get">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo">
+
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" placeholder="Ingresa tu ciudad">
+
+                <label for="cine">Selecciona tu Cine:</label>
+                <select id="cine" name="cine">
+                    <option value="">-- Selecciona un cine --</option>
+                    <option value="misiones">CINE MISIONES</option>
+                    <option value="gran_patio">CINE GRAN PATIO</option>
+                    <option value="torres">CINE LAS TORRES</option>
+                    <option value="alameda">CINE ALAMEDA</option>
+                </select>
+
+                <button type="submit">Registrarse e Ir a Cartelera</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        Hernández Mijares Edwin Gael | 5°I | 24308051280563
+    </footer>
+
+</body>
+</html>

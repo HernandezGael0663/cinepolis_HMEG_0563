@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinépolis - Cartelera</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #002b49;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #001f35;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .contenedor-principal {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .grid-cartelera {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+        .contenedor-pelicula {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .poster-pelicula {
+            width: 100%;
+            max-width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            background-color: #eee; 
+        }
+        .pelicula-tamano {
+            width: 100%;
+        }
+        .titulo-pelicula {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .info-peli {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .horarios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .hora {
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background: #fff;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+        .hora:hover {
+            background: #002b49;
+            color: white;
+        }
+        footer {
+            background-color: #002b49;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cinépolis</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio / Registro</a>
+        <a href="tarjeta.html">Tarjeta Club Cinépolis</a>
+        <a href="cartelera.html">Cartelera y Estrenos</a>
+    </nav>
+
+    <div class="contenedor-principal">
+        <h2>Cartelera y Próximos Estrenos</h2>
+        <div class="grid-cartelera">
+
+            <!-- Película 1 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli1.png" alt="Resident Evil">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Resident Evil: Noche Cero</div>
+                    <div class="info-peli">2026 · 1h 34m · B15 |  7.6</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">1:25 PM</span>
+                        <span class="hora">3:20 PM</span>
+                        <span class="hora">5:25 PM</span>
+                        <span class="hora">6:10 PM</span>
+                        <span class="hora">7:30 PM</span>
+                        <span class="hora">9:35 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 2 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli2.png" alt="El corazón de la bestia">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">El corazón de la bestia</div>
+                    <div class="info-peli">2026 · 1h 41m · PG-13 |  7.2</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">3:25 PM</span>
+                        <span class="hora">5:40 PM</span>
+                        <span class="hora">7:55 PM</span>
+                        <span class="hora">10:15 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 3 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli3.png" alt="Vértigo 2">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Vértigo 2: Punto muerto</div>
+                    <div class="info-peli">2026 · 1h 38m · B15 |  5.3</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">6:40 PM</span>
+                        <span class="hora">8:50 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 4 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli4.png" alt="Digger">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Digger</div>
+                    <div class="info-peli">2026 · 2h 9m · B15 |  7.5</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">1:20 PM</span>
+                        <span class="hora">7:20 PM</span>
+                        <span class="hora">10:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 5 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli5.png" alt="Madre Siniestra">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Madre siniestra</div>
+                    <div class="info-peli">2026 · 1h 33m · B |  5.4</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">1:30 PM</span>
+                        <span class="hora">2:10 PM</span>
+                        <span class="hora">3:35 PM</span>
+                        <span class="hora">4:20 PM</span>
+                        <span class="hora">5:55 PM</span>
+                        <span class="hora">8:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 6 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli6.png" alt="Verity">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Verity: la sombra de un engaño</div>
+                    <div class="info-peli">2026 · 1h 57m · B15 |  6.0</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">4:00 PM</span>
+                        <span class="hora">7:15 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 7 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli7.png" alt="Hope">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Hope</div>
+                    <div class="info-peli">2026 · 2h 40m · B15 |  6.8</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">1:55 PM</span>
+                        <span class="hora">5:35 PM</span>
+                        <span class="hora">8:55 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 8 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli8.png" alt="Coyote vs Acme">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Coyote vs. Acme</div>
+                    <div class="info-peli">2026 · 1h 43m · A |  7.3</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">2:40 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 9 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli9.png" alt="Avengers">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Avengers: Endgame</div>
+                    <div class="info-peli">2019 · 3h 1m · B |  8.4</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">8:20 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 10 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli10.png" alt="Shaun el cordero">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Shaun, el cordero: El monstruo de Mossy Bottom</div>
+                    <div class="info-peli">2026 · 1h 21m · A |  7.2</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">2:50 PM</span>
+                        <span class="hora">4:45 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 11 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli11.png" alt="El Árbol Mágico">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">El Árbol Mágico</div>
+                    <div class="info-peli">2026 · 1h 50m · PG |  6.2</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">2:15 PM</span>
+                        <span class="hora">4:40 PM</span>
+                        <span class="hora">7:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 12 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli12.png" alt="Your Name">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Your Name.</div>
+                    <div class="info-peli">2016 · 1h 46m · A |  8.4</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">7:05 PM</span>
+                        <span class="hora">9:30 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 13 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli13.png" alt="Pinocchio">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Pinocchio: Unstrung</div>
+                    <div class="info-peli">2026 · 1h 22m · C |  5.4</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">9:25 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 14 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli14.png" alt="Un mal partido">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Un mal partido</div>
+                    <div class="info-peli">2026 · 1h 34m · B |  4.8</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">2:45 PM</span>
+                        <span class="hora">5:05 PM</span>
+                        <span class="hora">7:10 PM</span>
+                        <span class="hora">9:15 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 15 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli15.png" alt="Madoka Magica">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Puella Magi Madoka Magica: Parte 1</div>
+                    <div class="info-peli">2012 · 2h 10m · B |  7.6</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">4:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Película 16 -->
+            <div class="contenedor-pelicula">
+                <img class="poster-pelicula" src="peli16.png" alt="Una familia espacial">
+                <div class="pelicula-tamano">
+                    <div class="titulo-pelicula">Una familia espacial</div>
+                    <div class="info-peli">2015 · 1h 34m · AA |  5.8</div>
+                    <p>Estándar:</p>
+                    <div class="horarios">
+                        <span class="hora">3:55 PM</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Hernández Mijares Edwin Gael| 5°I| 24308051280563
+    </footer>
+
+</body>
+</html>
